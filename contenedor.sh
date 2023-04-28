@@ -1,4 +1,5 @@
 #!/bin/bash
+version="0.0.1"
 
 # Instalar el paquete lxc
 sudo apt-get update
