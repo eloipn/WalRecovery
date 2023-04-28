@@ -24,6 +24,7 @@ sudo lxc exec demo -- sudo -i -u postgres bash -c "psql -c \"ALTER USER postgres
 sudo lxc exec demo -- sudo -i -u postgres bash -c "psql -c \"create database empresa;\""
 sudo lxc file push /home/usuario/WalRecovery/utils/database.sql demo/etc/
 sudo lxc exec demo -- sudo -i -u postgres bash -c "psql -d empresa < /etc/database.sql"
+sudo lxc file push /home/usuario/WalRecovery/scripts/wals.sh demo/etc/
 # Reiniciar PostgreSQL en el contenedor
 sudo lxc exec demo -- service postgresql restart
 
